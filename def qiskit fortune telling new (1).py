@@ -6,7 +6,7 @@
 
 from qiskit import *
 get_ipython().run_line_magic('matplotlib', 'inline')
-
+# -------
 circ = QuantumCircuit(6)
 for i in range(5):
     circ.h(i)
@@ -31,7 +31,7 @@ circ1 = QuantumCircuit(6)
 import numpy as np
 pi = np.pi
 b = np.arccos(a)
-
+# ------
 def zhenGua():
     from qiskit import *
     get_ipython().run_line_magic('matplotlib', 'inline')

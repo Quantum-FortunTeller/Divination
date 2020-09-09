@@ -29,12 +29,12 @@ screen = pygame.display.set_mode(size)
 window_surface = pygame.display.set_mode((1024,984))
 
 
-OPEN_SANS = "C:/Users/Louis/Desktop/Bagua_asset/OpenSans-Regular.ttf"
+OPEN_SANS = "D:/QiskitHackathon/Divination/Bagua_asset/OpenSans-Regular.ttf"
 smallFont = pygame.font.Font(OPEN_SANS, 20)
 mediumFont = pygame.font.Font(OPEN_SANS, 28)
 largeFont = pygame.font.Font(OPEN_SANS, 40)
 window_surface.fill((255, 255, 255))
-bg = pygame.image.load("C:/Users/Louis/Desktop/Bagua_asset/64.bmp")
+bg = pygame.image.load("D:/QiskitHackathon/Divination/Bagua_asset/64.bmp")
 
     #INSIDE OF THE GAME LOOP
 screen.blit(bg, (0, 0))
