@@ -29,7 +29,7 @@ screen = pygame.display.set_mode(size)
 window_surface = pygame.display.set_mode((1024,984))
 
 
-OPEN_SANS = "D:/QiskitHackathon/Divination/Bagua_asset/OpenSans-Regular.ttf"
+OPEN_SANS = "D:/QiskitHackathon/Divination/Bagua_asset/OpenSans-Regular.tff"
 smallFont = pygame.font.Font(OPEN_SANS, 20)
 mediumFont = pygame.font.Font(OPEN_SANS, 28)
 largeFont = pygame.font.Font(OPEN_SANS, 40)

@@ -10,6 +10,34 @@ import pygame
 import time
 
 from pygame.locals import QUIT
+class button():
+    def __init__(self, color, x,y,width,height, text=''):
+        self.color = color
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+        self.text = text
+
+    def draw(self,win,outline=None):
+        #Call this method to draw the button on the screen
+        if outline:
+            pygame.draw.rect(win, outline, (self.x-2,self.y-2,self.width+4,self.height+4),0)
+            
+        pygame.draw.rect(win, self.color, (self.x,self.y,self.width,self.height),0)
+        
+        if self.text != '':
+            font = pygame.font.SysFont('comicsans', 60)
+            text = font.render(self.text, 1, (0,0,0))
+            win.blit(text, (self.x + (self.width/2 - text.get_width()/2), self.y + (self.height/2 - text.get_height()/2)))
+
+    def isOver(self, pos):
+        #Pos is the mouse position or a tuple of (x,y) coordinates
+        if pos[0] > self.x and pos[0] < self.x + self.width:
+            if pos[1] > self.y and pos[1] < self.y + self.height:
+                return True
+            
+        return False
 
 clock = pygame.time.Clock()
 fps = 60
@@ -29,12 +57,12 @@ screen = pygame.display.set_mode(size)
 window_surface = pygame.display.set_mode((1024,984))
 
 
-OPEN_SANS = "C:/Users/Louis/Desktop/Bagua_asset/OpenSans-Regular.ttf"
+OPEN_SANS = "D:/QiskitHackathon/Divination/Bagua_asset/OpenSans-Regular.tff"
 smallFont = pygame.font.Font(OPEN_SANS, 20)
 mediumFont = pygame.font.Font(OPEN_SANS, 28)
 largeFont = pygame.font.Font(OPEN_SANS, 40)
 window_surface.fill((255, 255, 255))
-bg = pygame.image.load("C:/Users/Louis/Desktop/Bagua_asset/64.bmp")
+bg = pygame.image.load("D:/QiskitHackathon/Divination/Bagua_asset/64.bmp")
 
     #INSIDE OF THE GAME LOOP
 screen.blit(bg, (0, 0))
@@ -45,6 +73,7 @@ head_font = pygame.font.SysFont(None, 60)
 button = pygame.Rect(100, 100, 50, 50)
 instructions = True
 
+# greenButton = button((0,255,0),150,225,250,100,'Click Me')
 while True:
 
    
@@ -102,7 +131,7 @@ while True:
             lineRect.center = ((width / 1.33), 250 + 30 * i)
             screen.blit(line, lineRect)
 
-
+        
 
         # Play game button
         buttonRect = pygame.Rect((width / 4), (3 / 4) * height, width / 2, 60)
@@ -112,23 +141,16 @@ while True:
         pygame.draw.rect(screen, BLACK, buttonRect)
         screen.blit(buttonText, buttonTextRect)
 
-        click, _, _ = pygame.mouse.get_pressed()
-        if click == 1:
-            mouse = pygame.mouse.get_pos()
-            if buttonRect.collidepoint(mouse):
-                instructions = False
-                time.sleep(0.3)
+        # click, _, _ = pygame.mouse.get_pressed()
+        # flag = 1
+        # if click == 1:
+        #     mouse = pygame.mouse.get_pos()
+        #     if buttonRect.collidepoint(mouse):
+        #         instructions = False
+        #         print("Hello",flag)
+        #         flag = flag +1
+        #         time.sleep(0.3)
                 
-    for event in pygame.event.get():
-
-            if event.type == pygame.MOUSEBUTTONDOWN:
-                mouse_pos = event.pos  # gets mouse position
-
-                # checks if mouse position is over the button
-
-                if button.collidepoint(mouse_pos):
-                    # prints current location of mouse
-                    print('button was pressed at {0}'.format(mouse_pos))
                     
     buttonRect11 = pygame.Rect((width / 8.9), 275, width / 6, 50)
     buttonRect12 = pygame.Rect((width / 8.9), 375, width / 6, 50)   
@@ -144,20 +166,35 @@ while True:
     
     
     
-    pygame.display.update()
-    clock.tick(fps)
-
- 
-    break
-
-pygame.display.update()
-
-while True:
-    
+    pygame.display.flip()
     for event in pygame.event.get():
-        
+        #if event.type == pygame.MOUSEBUTTONDOWN
         if event.type == QUIT:
             pygame.quit()
             sys.exit()
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            print("MouseDown")
+            mouse_pos = event.pos
+            print("mouse pos: ",mouse_pos)
+            if buttonRect11.collidepoint(mouse_pos):
+                print("Hadamard")
+            if buttonRect21.collidepoint(mouse_pos):
+                print("JustMeasure")
+            if buttonRect12.collidepoint(mouse_pos):
+                print("U3")
+            if buttonRect22.collidepoint(mouse_pos):
+                print("StayQuantum")
+            if buttonRect.collidepoint(mouse_pos):
+                print("REVEAL")
+#     clock.tick(fps)
+
+ 
+#     break
+
+# pygame.display.update()
+print("here")
+while True:
+    pass
+    
             
        
