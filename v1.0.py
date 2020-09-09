@@ -47,8 +47,8 @@ class ClassicalOperator:
         def tzungGua(self):
             assert self.shangGua[0,0] != -1
             print("[classical綜卦]")
-            shangGua = np.flip(self.shangGua)
-            shiaGua = np.flip(self.shiaGua)
+            shangGua = np.flip(self.shiaGua)
+            shiaGua = np.flip(self.shangGua)
             return(shangGua, shiaGua)
         '''
         正卦
@@ -203,8 +203,8 @@ class QuantumOperator:
                 self.shiaGua_zhen = np.where((self.shiaGua==0)|(self.shiaGua==1), self.shiaGua^1, self.shiaGua)
                 return(self.shangGua_zhen, self.shiaGua_zhen)
             elif(mode=="tzungGua"):
-                self.shangGua_zhen = np.flip(self.shangGua)
-                self.shiaGua_zhen = np.flip(self.shiaGua)
+                self.shangGua_zhen = np.flip(self.shiaGua)
+                self.shiaGua_zhen = np.flip(self.shangGua)
                 return(self.shangGua_zhen, self.shiaGua_zhen)
             else:
                 return -1 #error
@@ -353,8 +353,8 @@ class QuantumOperatorU3:
                 self.shiaGua_zhen = np.where((self.shiaGua==0)|(self.shiaGua==1), self.shiaGua^1, self.shiaGua)
                 return(self.shangGua_zhen, self.shiaGua_zhen)
             elif(mode=="tzungGua"):
-                self.shangGua_zhen = np.flip(self.shangGua)
-                self.shiaGua_zhen = np.flip(self.shiaGua)
+                self.shangGua_zhen = np.flip(self.shiaGua)
+                self.shiaGua_zhen = np.flip(self.shangGua)
                 return(self.shangGua_zhen, self.shiaGua_zhen)
             else:
                 return -1 #error
@@ -422,8 +422,8 @@ class ClassicalOperatorU3:
     def tzungGua(self):
         assert self.shangGua[0,0] != -1
         print("[classical綜卦]")
-        shangGua = np.flip(self.shangGua)
-        shiaGua = np.flip(self.shiaGua)
+        shangGua = np.flip(self.shiaGua)
+        shiaGua = np.flip(self.shangGua)
         return(shangGua, shiaGua)
     '''
     正卦
