@@ -538,8 +538,8 @@ def explanGua(shangGua, shiaGua):
 
 # greenButton = button((0,255,0),150,225,250,100,'Click Me')
 while True:
-
-   
+    bg = pygame.image.load("D:/QiskitHackathon/Divination/Bagua_asset/64.bmp")
+    screen.blit(bg, (0, 0))
  # Show game instructions
     if instructions:
 
