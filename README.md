@@ -4,9 +4,10 @@
 ## Feature
 * Inspiration from ancient Chinese Divination
 * Limited quantum random number generator (QRNG)
+> ![image](https://github.com/Quantum-FortunTeller/Divination/blob/master/imgForReadMe/QRNG.png)
 > Ref: Jacak, Janusz E., et al. "Quantum random number generators with entanglement for public randomness testing." Scientific Reports 10.1 (2020): 1-9.
-> 
 * Operations
+> Swap gate (綜卦) and Pauil – X (變卦)
 ## How to run this pygame?
 First, you need to install <code>pygame</code> and <code>Qiskit</code> package.\
 Let's start the game! \
