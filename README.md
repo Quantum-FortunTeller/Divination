@@ -18,7 +18,7 @@ run <code>python Gamev1.0py</code>
 * Inverse Eight Trigrams 變卦(Pauli-X Gate)
 ![image](https://github.com/Quantum-FortunTeller/Divination/blob/master/imgForReadMe/Bian.png)
 * Partial Eight Trigrams 互卦(Permutation)
-![image](https://github.com/Quantum-FortunTeller/Divination/blob/master/imgForReadMe/Hu.png)
+![image](https://github.com/Quantum-FortunTeller/Divination/blob/master/imgForReadMe/Hu.png)\
 Regarding the double measurement of the partial eight trigrams problem, we are fully aware that it is indeed weird to perform measurement twice. However, we aim to **reflect the exact calculation of the original "Hù guà"**.
 Therefore, in order to fully demonstrate the Hù guà calculation, we perform the measurement twice on the qubit 3 and qubit 4, although it does not alter the result.
 
