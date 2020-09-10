@@ -1,4 +1,5 @@
 # Quantum Bagua divination machine
+![image](https://github.com/Quantum-FortunTeller/Divination/blob/master/imgForReadMe/sampleImg.PNG)
 ## Feature
 * Inspiration from ancient Chinese Divination
 * Limited quantum random number generator (QRNG)
