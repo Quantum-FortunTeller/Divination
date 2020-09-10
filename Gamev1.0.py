@@ -480,19 +480,19 @@ screen = pygame.display.set_mode(size)
 window_surface = pygame.display.set_mode((1024,984))
 
 
-OPEN_SANS = "D:/QiskitHackathon/Divination/Bagua_asset/OpenSans-Regular.tff"
+OPEN_SANS = "./Bagua_asset/OpenSans-Regular.tff"
 smallFont = pygame.font.Font(OPEN_SANS, 20)
 mediumFont = pygame.font.Font(OPEN_SANS, 28)
 largeFont = pygame.font.Font(OPEN_SANS, 40)
 window_surface.fill((255, 255, 255))
-bg = pygame.image.load("D:/QiskitHackathon/Divination/Bagua_asset/64.bmp")
+bg = pygame.image.load("./Bagua_asset/64.bmp")
 
     #INSIDE OF THE GAME LOOP
 screen.blit(bg, (0, 0))
 
 # For chinese word
 #Place after the OPEN_SANS path
-OPEN_mj = "D:/QiskitHackathon/Divination/Bagua_asset/msjh.ttf"
+OPEN_mj = "./Bagua_asset/msjh.ttf"
 miniFont = pygame.font.Font(OPEN_mj, 12)
 smallFont2 = pygame.font.Font(OPEN_mj, 20)
 
@@ -523,7 +523,7 @@ results6 = [""]
 # User define function
 def get64txt():
     zdic = {}
-    with open('D:/QiskitHackathon/Divination/64.txt', encoding = 'utf8') as zfile:
+    with open('64.txt', encoding = 'utf8') as zfile:
         for line in zfile:
             z = line.split(' ', 1)
             key = z[0]
@@ -540,7 +540,7 @@ def explanGua(shangGua, shiaGua):
 
 # greenButton = button((0,255,0),150,225,250,100,'Click Me')
 while True:
-    bg = pygame.image.load("D:/QiskitHackathon/Divination/Bagua_asset/64.bmp")
+    bg = pygame.image.load("./Bagua_asset/64.bmp")
     screen.blit(bg, (0, 0))
  # Show game instructions
     if instructions:
