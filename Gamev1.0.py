@@ -154,8 +154,9 @@ class QuantumOperator:
             circ = QuantumCircuit(6)
             for i in range(6):
                 circ.h(i)
-            circ.swap(0,2)
-            circ.swap(3,5)
+            circ.swap(0,5)
+            circ.swap(1,4)
+            circ.swap(2,3)
        
             circ.measure_all()
     
@@ -318,8 +319,9 @@ class QuantumOperatorU3:
         circ = QuantumCircuit(6)
         for i in range(6):
             circ.u3(self.U3(), 0, 0,[i])
-        circ.swap(0,2)
-        circ.swap(3,5)
+        circ.swap(0,5)
+        circ.swap(1,4)
+        circ.swap(2,3)
        
         circ.measure_all()
     
@@ -604,8 +606,8 @@ while True:
             screen.blit(line, lineRect)
         
         #Options
-        option11 =["Hadamard Gate"]
-        option12 =["U3 Gate"]
+        option11 =["Superposition(H)"]
+        option12 =["Entanglement(U3)"]
         option21 =["Just Measure"]
         option22 =["Stay Quantum"]
         option31 =["Zhèng Gua"]
@@ -788,6 +790,9 @@ while True:
                         results1 = ['[正卦]']
                         results2 = [ExplanGua[0]]
                         results3 = [ExplanGua[1]]
+                        results4 = [""]
+                        results5 = [""]
+                        results6 = [""]
                     elif(x==2): # 變卦
                         print("[-----Prophecy-----]")
                         COP.zhenGua()
@@ -856,7 +861,9 @@ while True:
                         results1 = ['[正卦]']
                         results2 = [ExplanGua[0]]
                         results3 = [ExplanGua[1]]
-
+                        results4 = [""]
+                        results5 = [""]
+                        results6 = [""]
                     elif(x==2): # 變卦
                         print("[-----Prophecy-----]")
                         QOP.bianGua()
@@ -926,6 +933,9 @@ while True:
                         results1 = ['[正卦]']
                         results2 = [ExplanGua[0]]
                         results3 = [ExplanGua[1]]
+                        results4 = [""]
+                        results5 = [""]
+                        results6 = [""]
                     elif(x==2): # 變卦
                         print("[-----Prophecy-----]")
                         COP.zhenGua()
@@ -994,11 +1004,13 @@ while True:
                         results1 = ['[正卦]']
                         results2 = [ExplanGua[0]]
                         results3 = [ExplanGua[1]]
-
+                        results4 = [""]
+                        results5 = [""]
+                        results6 = [""]
                     elif(x==2): # 變卦
                         print("[-----Prophecy-----]")
                         QOP.bianGua()
-                        ExplanGua = explanGua(COP.shangGua, COP.shiaGua)
+                        ExplanGua = explanGua(QOP.shangGua, QOP.shiaGua)
                         print("[Bian Gua]: ", ExplanGua[0])
                         print("Oracle: ", ExplanGua[1])
                         results4 = ['[變卦]']
